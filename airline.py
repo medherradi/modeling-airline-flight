@@ -15,3 +15,22 @@ class Flight:
 
     def get_flight_number(self):
         return self._number
+
+    def airline(self):
+        return self._number[:2]
+
+
+class Aircraft:
+
+    def __init__(self, registration, model, num_rows, num_seats_per_row):
+        self._registration = registration
+        self._model = model
+        self._num_rows = num_rows
+        self._num_seats_per_row = num_seats_per_row
+
+    def get_registration(self):
+        print(self)
+        return self._registration
+
+    def get_model(self):
+        return self._model
