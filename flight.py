@@ -66,3 +66,8 @@ class Flight:
 
         self._seating[to_row][to_letter] = self._seating[from_row][from_letter]
         self._seating[from_row][from_letter] = None
+
+    def available_seat(self):
+        return sum(sum(1 for place in row.values() if  place is None) 
+                    for row in self._seating
+                    if row is not None)
